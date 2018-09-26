@@ -20,21 +20,21 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-gp-rx2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell me your worries ...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P6-0v-3GT">
-                                <rect key="frame" x="55" y="120" width="265" height="72"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HE-GY-NPG" userLabel="StartButton">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="6G8-GO-02T" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="c5c-wO-FmA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell me your worries ...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P6-0v-3GT">
+                                <rect key="frame" x="55" y="120" width="265" height="60"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,23 +63,28 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Am4-cy-pKq" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-lD-qvd" userLabel="Balloon">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Balloon" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-lD-qvd" userLabel="Balloon">
                                 <rect key="frame" x="60" y="120" width="255" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="4pB-4o-PPO"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Yl-w9x">
-                                <rect key="frame" x="60" y="120" width="255" height="275"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="37.5" y="120" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.81176470588235294" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Nks-Nb-sNA"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZRo-af-Pmp"/>
+                                </constraints>
                                 <string key="text">Is there a worry, stressor, or anxiety you are carrying around with you? Sometimes it helps to write it down. Get it out of your head, into this balloon ... and then pop, swipe, or scribble your negative thought away!</string>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
@@ -101,21 +106,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5NM-G5-Kia" firstAttribute="bottom" secondItem="ZFb-et-YPW" secondAttribute="bottom" constant="100" id="0wB-7q-59K"/>
-                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="top" secondItem="Tve-lD-qvd" secondAttribute="top" id="9rz-ot-lYp"/>
                             <constraint firstItem="5NM-G5-Kia" firstAttribute="trailing" secondItem="Tve-lD-qvd" secondAttribute="trailing" constant="60" id="Abo-19-TmH"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="trailing" secondItem="5NM-G5-Kia" secondAttribute="trailing" id="Aii-mF-e5o"/>
-                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="bottom" secondItem="Tve-lD-qvd" secondAttribute="bottom" id="EcU-NX-aHg"/>
+                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="top" secondItem="5NM-G5-Kia" secondAttribute="top" constant="100" id="J33-O7-d9Z"/>
                             <constraint firstItem="Tve-lD-qvd" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" constant="60" id="UJE-My-KW9"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" id="X6E-cG-5DK"/>
                             <constraint firstItem="ZFb-et-YPW" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="Zr4-a9-26A"/>
+                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="bBZ-BH-9iq"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="top" secondItem="rxI-W0-BmC" secondAttribute="top" id="cPj-dX-loe"/>
-                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="trailing" secondItem="Tve-lD-qvd" secondAttribute="trailing" id="lu5-eq-n2d"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="bottom" secondItem="5NM-G5-Kia" secondAttribute="bottom" id="qH3-LG-jmS"/>
-                            <constraint firstItem="e6z-Yl-w9x" firstAttribute="leading" secondItem="Tve-lD-qvd" secondAttribute="leading" id="qRm-Rm-WFi"/>
                             <constraint firstItem="Tve-lD-qvd" firstAttribute="top" secondItem="5NM-G5-Kia" secondAttribute="top" constant="100" id="ruh-aQ-nM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5NM-G5-Kia"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Tve-lD-qvd"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="balloonImage" destination="Tve-lD-qvd" id="jST-RN-nC7"/>
+                        <outlet property="inputTextView" destination="e6z-Yl-w9x" id="DZv-PW-Djv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zl-9s-MM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,6 +143,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2fS-Hx-H9r" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nxG-Rd-F0U" userLabel="Balloon">
                                 <rect key="frame" x="60" y="120" width="255" height="275"/>
@@ -143,7 +156,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Is there a worry, stressor, or anxiety you are carrying around with you? Sometimes it helps to write it down. Get it out of your head, into this balloon ... and then pop, swipe, or scribble your negative thought away!</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -190,18 +203,19 @@
         <!--Exit-->
         <scene sceneID="NpC-uZ-lKK">
             <objects>
-                <viewController id="fDf-qF-JUq" userLabel="Exit" sceneMemberID="viewController">
+                <viewController id="fDf-qF-JUq" userLabel="Exit" customClass="ExitViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UyS-bW-Ztf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKb-QJ-Joa" userLabel="Background">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not that you've let it go here, try to do the same in your mind ... and don't forget to have a beautiful day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWi-eY-Oga">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Now that you've let it go here, try to do the same in your mind ... and don't forget to have a beautiful day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWi-eY-Oga">
                                 <rect key="frame" x="55" y="120" width="265" height="193"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -223,4 +237,7 @@
             <point key="canvasLocation" x="2637.5999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Balloon" width="650" height="800"/>
+    </resources>
 </document>

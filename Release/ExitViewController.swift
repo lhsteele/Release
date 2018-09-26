@@ -1,5 +1,5 @@
 //
-//  InputViewController.swift
+//  ExitViewController.swift
 //  Release
 //
 //  Created by Lisa Steele on 9/26/18.
@@ -8,23 +8,19 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class ExitViewController: UIViewController {
 
-    @IBOutlet var balloonImage: UIImageView!
-    @IBOutlet var inputTextView: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        inputTextView.layer.cornerRadius = 150
-        inputTextView.layer.masksToBounds = true
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
     /*
     // MARK: - Navigation
