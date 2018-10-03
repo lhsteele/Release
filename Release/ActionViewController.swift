@@ -19,6 +19,7 @@ class ActionViewController: UIViewController {
         super.viewDidLoad()
         
         userInput.text = textInputPassed
+        userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
         
         print (textInputPassed)
     }

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Balloon.png",
+      "filename" : "LabelBackground.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Balloon@2x.png",
+      "filename" : "LabelBackground@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Balloon@3x.png",
+      "filename" : "LabelBackground@3x.png",
       "scale" : "3x"
     }
   ],
