@@ -18,6 +18,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         inputTextView.delegate = self
         inputTextView.returnKeyType = .done
+        
     }
 
     override func didReceiveMemoryWarning() {
