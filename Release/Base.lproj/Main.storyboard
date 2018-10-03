@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="275" id="4pB-4o-PPO"/>
                                 </constraints>
                             </imageView>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Yl-w9x">
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Yl-w9x">
                                 <rect key="frame" x="37.5" y="120" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Nks-Nb-sNA"/>
@@ -98,7 +98,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7wh-fS-hCi" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="GhF-wr-MKP"/>
+                                    <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueToAction" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="GhF-wr-MKP"/>
                                 </connections>
                             </button>
                         </subviews>

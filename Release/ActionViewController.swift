@@ -12,6 +12,7 @@ class ActionViewController: UIViewController {
     
     @IBOutlet var balloonImageView: UIImageView!
     @IBOutlet var textView: UITextView!
+    var textInputPassed = String() 
     
     override func viewDidLoad() {
         super.viewDidLoad()

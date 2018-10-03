@@ -12,13 +12,12 @@ class InputViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var balloonImage: UIImageView!
     @IBOutlet var inputTextView: UITextView!
+    var textInputPassed = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputTextView.delegate = self
 
-//        inputTextView.layer.cornerRadius = 150
-//        inputTextView.clipsToBounds = true
-//        inputTextView.adjustsFontForContentSizeCategory = true 
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +25,29 @@ class InputViewController: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SegueToAction") {
+            //pass the textfield input to the next view
+            let pointer = segue.destination as! ActionViewController
+            pointer.textInputPassed = self.textInputPassed
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        inputTextView.text = nil
+    }
+    
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView == self.inputTextView {
+            self.textInputPassed = inputTextView.text
+        }
+    }
+    
+    func textViewShouldReturn(_ texView: UITextView) -> Bool {
+        inputTextView.resignFirstResponder()
+        return true
+    }
 
 
     /*
