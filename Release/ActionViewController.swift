@@ -11,15 +11,14 @@ import UIKit
 class ActionViewController: UIViewController {
     
     @IBOutlet var balloonImageView: UIImageView!
-    @IBOutlet var textView: UITextView!
+    @IBOutlet var userInput: UILabel!
+    
     var textInputPassed = String() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        textView.layer.cornerRadius = 150
-        textView.clipsToBounds = true
-        textView.adjustsFontForContentSizeCategory = true
+        
+        userInput.text = textInputPassed
         
         print (textInputPassed)
     }
