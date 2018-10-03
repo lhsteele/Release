@@ -10,7 +10,7 @@ import UIKit
 
 class ActionViewController: UIViewController {
     
-    @IBOutlet var balloonImageView: UIImageView!
+
     @IBOutlet var userInput: UILabel!
     
     var textInputPassed = String() 
