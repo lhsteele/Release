@@ -9,11 +9,16 @@
 import UIKit
 
 class ActionViewController: UIViewController {
-
+    
+    @IBOutlet var balloonImageView: UIImageView!
+    @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textView.layer.cornerRadius = 150
+        textView.clipsToBounds = true
+        textView.adjustsFontForContentSizeCategory = true
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var balloonImage: UIImageView!
     @IBOutlet var inputTextView: UITextView!
@@ -16,14 +16,16 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        inputTextView.layer.cornerRadius = 150
-        inputTextView.layer.masksToBounds = true
+//        inputTextView.layer.cornerRadius = 150
+//        inputTextView.clipsToBounds = true
+//        inputTextView.adjustsFontForContentSizeCategory = true 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
 
     /*
