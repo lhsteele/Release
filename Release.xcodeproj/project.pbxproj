@@ -14,6 +14,7 @@
 		4287DAC9215C1CB5009697FC /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAC8215C1CB5009697FC /* InputViewController.swift */; };
 		4287DACD215C1F27009697FC /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DACC215C1F27009697FC /* ActionViewController.swift */; };
 		4287DACF215C215C009697FC /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DACE215C215C009697FC /* ExitViewController.swift */; };
+		4287DAD121656ECF009697FC /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAD021656ECF009697FC /* ScratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4287DAC8215C1CB5009697FC /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		4287DACC215C1F27009697FC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		4287DACE215C215C009697FC /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
+		4287DAD021656ECF009697FC /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4287DAB6215C1862009697FC /* AppDelegate.swift */,
 				4287DAC8215C1CB5009697FC /* InputViewController.swift */,
 				4287DACC215C1F27009697FC /* ActionViewController.swift */,
+				4287DAD021656ECF009697FC /* ScratchView.swift */,
 				4287DACE215C215C009697FC /* ExitViewController.swift */,
 				4287DABA215C1862009697FC /* Main.storyboard */,
 				4287DABD215C1865009697FC /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4287DACF215C215C009697FC /* ExitViewController.swift in Sources */,
+				4287DAD121656ECF009697FC /* ScratchView.swift in Sources */,
 				4287DAB7215C1862009697FC /* AppDelegate.swift in Sources */,
 				4287DAC9215C1CB5009697FC /* InputViewController.swift in Sources */,
 				4287DACD215C1F27009697FC /* ActionViewController.swift in Sources */,
