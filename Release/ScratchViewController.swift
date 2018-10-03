@@ -1,30 +1,30 @@
 //
-//  ActionViewController.swift
+//  ScratchViewController.swift
 //  Release
 //
-//  Created by Lisa Steele on 9/26/18.
+//  Created by Lisa Steele on 10/3/18.
 //  Copyright © 2018 Lisa Steele. All rights reserved.
 //
 
 import UIKit
 
-class ActionViewController: UIViewController {
-    
+class ScratchViewController: UIViewController {
+
+    @IBOutlet var scratchView: ScratchView!
     @IBOutlet var userInput: UILabel!
-    @IBOutlet var button: UIButton!
+    @IBOutlet var backButton: UIButton!
     var textInputPassed = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         userInput.text = textInputPassed
         userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
-        
-        print (textInputPassed)
     }
-
-    @IBAction func goButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "SegueToScratch", sender: button)
+    
+    
+    @IBAction func backToAction(_ sender: Any) {
+        performSegue(withIdentifier: "SegueScratchToAction", sender: backButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,12 +32,6 @@ class ActionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "SegueToScratch") {
-            let pointer = segue.destination as! ScratchViewController
-            pointer.textInputPassed = self.textInputPassed
-        }
-    }
 
     /*
     // MARK: - Navigation

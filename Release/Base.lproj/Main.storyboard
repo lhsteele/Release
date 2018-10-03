@@ -132,6 +132,77 @@
             </objects>
             <point key="canvasLocation" x="973.60000000000002" y="117.39130434782609"/>
         </scene>
+        <!--ScratchView-->
+        <scene sceneID="GHY-KB-3IK">
+            <objects>
+                <viewController title="ScratchView" id="MUG-GG-PbQ" customClass="ScratchViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NmJ-gX-EOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="jWR-9S-m8B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJQ-C6-8Bg" userLabel="Scratch View" customClass="ScratchView" customModule="Release" customModuleProvider="target">
+                                <rect key="frame" x="60" y="120" width="255" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fx-r1-bLk" userLabel="User Input">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2fx-r1-bLk" secondAttribute="bottom" id="JGf-a9-h9A"/>
+                                    <constraint firstItem="2fx-r1-bLk" firstAttribute="leading" secondItem="XJQ-C6-8Bg" secondAttribute="leading" id="XT4-zn-iPO"/>
+                                    <constraint firstAttribute="height" constant="250" id="ZAO-aE-PSh"/>
+                                    <constraint firstItem="2fx-r1-bLk" firstAttribute="top" secondItem="XJQ-C6-8Bg" secondAttribute="top" id="rCK-fr-8ZR"/>
+                                    <constraint firstAttribute="trailing" secondItem="2fx-r1-bLk" secondAttribute="trailing" id="ydn-cg-XSb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IZ-pa-E5p">
+                                <rect key="frame" x="161.5" y="534" width="51" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Again!">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToAction:" destination="MUG-GG-PbQ" eventType="touchUpInside" id="CWC-yU-dkx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jWR-9S-m8B" firstAttribute="top" secondItem="lyn-kD-G0C" secondAttribute="top" constant="-20" id="3mv-2m-Ska"/>
+                            <constraint firstItem="jWR-9S-m8B" firstAttribute="bottom" secondItem="lyn-kD-G0C" secondAttribute="bottom" id="6K4-Nv-KlV"/>
+                            <constraint firstItem="jWR-9S-m8B" firstAttribute="leading" secondItem="lyn-kD-G0C" secondAttribute="leading" id="7WQ-5I-RpL"/>
+                            <constraint firstItem="XJQ-C6-8Bg" firstAttribute="leading" secondItem="lyn-kD-G0C" secondAttribute="leading" constant="60" id="9SR-sf-sUR"/>
+                            <constraint firstItem="1IZ-pa-E5p" firstAttribute="centerX" secondItem="NmJ-gX-EOB" secondAttribute="centerX" id="Bck-6N-r4z"/>
+                            <constraint firstItem="jWR-9S-m8B" firstAttribute="trailing" secondItem="lyn-kD-G0C" secondAttribute="trailing" id="MIA-EH-X7V"/>
+                            <constraint firstItem="lyn-kD-G0C" firstAttribute="trailing" secondItem="XJQ-C6-8Bg" secondAttribute="trailing" constant="60" id="kbd-4a-Z7N"/>
+                            <constraint firstItem="XJQ-C6-8Bg" firstAttribute="top" secondItem="lyn-kD-G0C" secondAttribute="top" constant="100" id="ld8-ez-uke"/>
+                            <constraint firstItem="lyn-kD-G0C" firstAttribute="bottom" secondItem="1IZ-pa-E5p" secondAttribute="bottom" constant="100" id="vKV-i9-zpi"/>
+                            <constraint firstItem="XJQ-C6-8Bg" firstAttribute="centerX" secondItem="NmJ-gX-EOB" secondAttribute="centerX" id="z6e-Hl-vW9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lyn-kD-G0C"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="1IZ-pa-E5p" id="tJ0-Av-3F5"/>
+                        <outlet property="scratchView" destination="XJQ-C6-8Bg" id="07v-tl-QVX"/>
+                        <outlet property="userInput" destination="2fx-r1-bLk" id="aCq-dj-oBm"/>
+                        <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueScratchToAction" id="Gos-Va-nvz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9U-8j-ko6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="-631.93403298350825"/>
+        </scene>
         <!--Action-->
         <scene sceneID="8hx-YD-VJS">
             <objects>
@@ -153,7 +224,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-gt-1Vd" customClass="ScratchView" customModule="Release" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-gt-1Vd" userLabel="View" customClass="ScratchView" customModule="Release" customModuleProvider="target">
                                 <rect key="frame" x="60" y="120" width="255" height="250"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-Op-uBW">
@@ -176,6 +247,16 @@
                                     <constraint firstAttribute="trailing" secondItem="TGb-Op-uBW" secondAttribute="trailing" id="r4H-WU-5cx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
+                                <rect key="frame" x="172" y="537" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="0SH-s6-kKI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -187,15 +268,19 @@
                             <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="IUV-gt-1Vd" secondAttribute="trailing" constant="60" id="Xlr-pj-NfB"/>
                             <constraint firstItem="IUV-gt-1Vd" firstAttribute="leading" secondItem="jW7-DD-IxN" secondAttribute="leading" constant="60" id="Xlv-23-DUd"/>
                             <constraint firstItem="Vc8-G4-VSz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0V6-Yd-tXG" secondAttribute="leading" constant="20" symbolic="YES" id="dyc-US-pOo"/>
+                            <constraint firstItem="xWU-V0-OKO" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="jaQ-Gr-X3m"/>
                             <constraint firstItem="2fS-Hx-H9r" firstAttribute="top" secondItem="0V6-Yd-tXG" secondAttribute="top" id="tTK-5B-7xm"/>
+                            <constraint firstItem="jW7-DD-IxN" firstAttribute="bottom" secondItem="xWU-V0-OKO" secondAttribute="bottom" constant="100" id="veK-oS-ld4"/>
                             <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="Vc8-G4-VSz" secondAttribute="trailing" constant="16" id="yHW-Fd-5zR"/>
                             <constraint firstItem="Vc8-G4-VSz" firstAttribute="top" secondItem="jW7-DD-IxN" secondAttribute="top" id="yLv-mm-IZA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jW7-DD-IxN"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="xWU-V0-OKO" id="dbf-QU-eXV"/>
                         <outlet property="userInput" destination="TGb-Op-uBW" id="9me-lR-fWE"/>
                         <segue destination="fDf-qF-JUq" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
+                        <segue destination="MUG-GG-PbQ" kind="presentation" identifier="SegueToScratch" id="R4D-dm-pOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4n-LJ-cBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,4 +328,7 @@
         <image name="Background" width="200" height="300"/>
         <image name="Balloon" width="650" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gos-Va-nvz"/>
+    </inferredMetricsTieBreakers>
 </document>
