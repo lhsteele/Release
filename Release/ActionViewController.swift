@@ -20,6 +20,8 @@ class ActionViewController: UIViewController {
         textView.layer.cornerRadius = 150
         textView.clipsToBounds = true
         textView.adjustsFontForContentSizeCategory = true
+        
+        print (textInputPassed)
     }
 
     override func didReceiveMemoryWarning() {

@@ -17,7 +17,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         inputTextView.delegate = self
-
+        inputTextView.returnKeyType = .done
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,20 +44,12 @@ class InputViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textViewShouldReturn(_ texView: UITextView) -> Bool {
-        inputTextView.resignFirstResponder()
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            inputTextView.resignFirstResponder()
+            return false
+        }
         return true
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
