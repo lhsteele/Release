@@ -205,7 +205,7 @@
         <!--Swipe-->
         <scene sceneID="lY3-na-U6p">
             <objects>
-                <viewController id="vYd-EB-OPj" userLabel="Swipe" sceneMemberID="viewController">
+                <viewController id="vYd-EB-OPj" userLabel="Swipe" customClass="SwipeViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jRy-19-VV7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-jJ-FFx">
                                 <rect key="frame" x="60" y="120" width="255" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-8c-Bfp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-8c-Bfp">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -256,6 +256,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="scE-bR-4RF"/>
                     </view>
+                    <connections>
+                        <outlet property="userInput" destination="WDp-8c-Bfp" id="mT8-Hc-i3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,6 +415,6 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GhF-wr-MKP"/>
+        <segue reference="Gos-Va-nvz"/>
     </inferredMetricsTieBreakers>
 </document>

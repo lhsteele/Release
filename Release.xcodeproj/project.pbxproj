@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		425490BC2166C17B0061C322 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425490BB2166C17B0061C322 /* InteractionPanToClose.swift */; };
+		425490BE2166D0EF0061C322 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425490BD2166D0EF0061C322 /* SwipeViewController.swift */; };
 		4287DAB7215C1862009697FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAB6215C1862009697FC /* AppDelegate.swift */; };
 		4287DABC215C1862009697FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4287DABA215C1862009697FC /* Main.storyboard */; };
 		4287DABE215C1865009697FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4287DABD215C1865009697FC /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		425490BB2166C17B0061C322 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
+		425490BD2166D0EF0061C322 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		4287DAB3215C1862009697FC /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4287DAB6215C1862009697FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4287DABB215C1862009697FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				4287DAC8215C1CB5009697FC /* InputViewController.swift */,
 				4287DACC215C1F27009697FC /* ActionViewController.swift */,
 				4287DAD22165770E009697FC /* ScratchViewController.swift */,
+				425490BD2166D0EF0061C322 /* SwipeViewController.swift */,
 				4287DAD021656ECF009697FC /* ScratchView.swift */,
 				4287DACE215C215C009697FC /* ExitViewController.swift */,
 				425490BB2166C17B0061C322 /* InteractionPanToClose.swift */,
@@ -153,6 +156,7 @@
 				4287DACF215C215C009697FC /* ExitViewController.swift in Sources */,
 				4287DAD121656ECF009697FC /* ScratchView.swift in Sources */,
 				4287DAB7215C1862009697FC /* AppDelegate.swift in Sources */,
+				425490BE2166D0EF0061C322 /* SwipeViewController.swift in Sources */,
 				4287DAD32165770E009697FC /* ScratchViewController.swift in Sources */,
 				425490BC2166C17B0061C322 /* InteractionPanToClose.swift in Sources */,
 				4287DAC9215C1CB5009697FC /* InputViewController.swift in Sources */,

@@ -45,6 +45,10 @@ class ActionViewController: UIViewController {
             let pointer = segue.destination as! ScratchViewController
             pointer.textInputPassed = self.textInputPassed
         }
+        if (segue.identifier == "SegueToSwipe") {
+            let pointer = segue.destination as! SwipeViewController
+            pointer.textInputPassed = self.textInputPassed
+        }
     }
 
     /*
