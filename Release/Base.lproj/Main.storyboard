@@ -88,9 +88,8 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFb-et-YPW">
-                                <rect key="frame" x="112.5" y="537" width="150" height="30"/>
+                                <rect key="frame" x="114" y="537" width="147" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="89d-LB-ujN"/>
                                     <constraint firstAttribute="height" constant="30" id="yo0-91-xJU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -107,10 +106,10 @@
                             <constraint firstItem="5NM-G5-Kia" firstAttribute="bottom" secondItem="ZFb-et-YPW" secondAttribute="bottom" constant="100" id="0wB-7q-59K"/>
                             <constraint firstItem="5NM-G5-Kia" firstAttribute="trailing" secondItem="Tve-lD-qvd" secondAttribute="trailing" constant="60" id="Abo-19-TmH"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="trailing" secondItem="5NM-G5-Kia" secondAttribute="trailing" id="Aii-mF-e5o"/>
+                            <constraint firstItem="ZFb-et-YPW" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="FPu-uI-PGT"/>
                             <constraint firstItem="e6z-Yl-w9x" firstAttribute="top" secondItem="5NM-G5-Kia" secondAttribute="top" constant="100" id="J33-O7-d9Z"/>
                             <constraint firstItem="Tve-lD-qvd" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" constant="60" id="UJE-My-KW9"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" id="X6E-cG-5DK"/>
-                            <constraint firstItem="ZFb-et-YPW" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="Zr4-a9-26A"/>
                             <constraint firstItem="e6z-Yl-w9x" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="bBZ-BH-9iq"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="top" secondItem="rxI-W0-BmC" secondAttribute="top" id="cPj-dX-loe"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="bottom" secondItem="5NM-G5-Kia" secondAttribute="bottom" id="qH3-LG-jmS"/>
@@ -219,9 +218,8 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Fos-Nl-BKl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Fos-Nl-BKl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-jJ-FFx">
                                 <rect key="frame" x="60" y="120" width="255" height="250"/>
@@ -244,10 +242,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Fos-Nl-BKl" firstAttribute="leading" secondItem="scE-bR-4RF" secondAttribute="leading" id="8fA-q9-EGM"/>
                             <constraint firstItem="scE-bR-4RF" firstAttribute="trailing" secondItem="MdA-jJ-FFx" secondAttribute="trailing" constant="60" id="92S-rp-Gj8"/>
+                            <constraint firstItem="Fos-Nl-BKl" firstAttribute="trailing" secondItem="scE-bR-4RF" secondAttribute="trailing" id="I9r-cN-Ude"/>
                             <constraint firstItem="Q4k-Bj-sAG" firstAttribute="top" secondItem="jRy-19-VV7" secondAttribute="top" id="KhB-Ig-Pga"/>
+                            <constraint firstItem="Fos-Nl-BKl" firstAttribute="bottom" secondItem="scE-bR-4RF" secondAttribute="bottom" id="S6V-8b-nJ6"/>
                             <constraint firstItem="Q4k-Bj-sAG" firstAttribute="trailing" secondItem="scE-bR-4RF" secondAttribute="trailing" id="XjK-VO-kas"/>
                             <constraint firstItem="MdA-jJ-FFx" firstAttribute="top" secondItem="scE-bR-4RF" secondAttribute="top" constant="100" id="YAx-u3-l6P"/>
+                            <constraint firstItem="Fos-Nl-BKl" firstAttribute="top" secondItem="jRy-19-VV7" secondAttribute="top" id="ZsM-v5-blO"/>
                             <constraint firstItem="Q4k-Bj-sAG" firstAttribute="bottom" secondItem="scE-bR-4RF" secondAttribute="bottom" id="iY8-58-x4m"/>
                             <constraint firstItem="Q4k-Bj-sAG" firstAttribute="leading" secondItem="scE-bR-4RF" secondAttribute="leading" id="khs-YN-dSP"/>
                             <constraint firstItem="MdA-jJ-FFx" firstAttribute="leading" secondItem="scE-bR-4RF" secondAttribute="leading" constant="60" id="mzg-e9-kUH"/>
@@ -303,16 +305,38 @@
                                     <constraint firstAttribute="trailing" secondItem="TGb-Op-uBW" secondAttribute="trailing" id="r4H-WU-5cx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
-                                <rect key="frame" x="172" y="537" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="goButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="0SH-s6-kKI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DAn-Kr-ZMn">
+                                <rect key="frame" x="98" y="537" width="178" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxz-Pp-gtv">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Scratch">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scratchButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="gaA-Ho-OLM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIK-7K-q6L">
+                                        <rect key="frame" x="61" y="0.0" width="56" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Pop">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
+                                        <rect key="frame" x="122" y="0.0" width="56" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Swipe">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="swipeButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="CC4-Gw-xCP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -321,22 +345,25 @@
                             <constraint firstItem="IUV-gt-1Vd" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="6ty-sp-vMb"/>
                             <constraint firstItem="2fS-Hx-H9r" firstAttribute="bottom" secondItem="jW7-DD-IxN" secondAttribute="bottom" id="FBN-J3-3hf"/>
                             <constraint firstItem="2fS-Hx-H9r" firstAttribute="leading" secondItem="jW7-DD-IxN" secondAttribute="leading" id="R8g-HM-80z"/>
+                            <constraint firstItem="DAn-Kr-ZMn" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="SDm-Wo-buY"/>
                             <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="IUV-gt-1Vd" secondAttribute="trailing" constant="60" id="Xlr-pj-NfB"/>
                             <constraint firstItem="IUV-gt-1Vd" firstAttribute="leading" secondItem="jW7-DD-IxN" secondAttribute="leading" constant="60" id="Xlv-23-DUd"/>
                             <constraint firstItem="Vc8-G4-VSz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0V6-Yd-tXG" secondAttribute="leading" constant="20" symbolic="YES" id="dyc-US-pOo"/>
-                            <constraint firstItem="xWU-V0-OKO" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="jaQ-Gr-X3m"/>
+                            <constraint firstItem="jW7-DD-IxN" firstAttribute="bottom" secondItem="DAn-Kr-ZMn" secondAttribute="bottom" constant="100" id="kSu-kM-RKE"/>
                             <constraint firstItem="2fS-Hx-H9r" firstAttribute="top" secondItem="0V6-Yd-tXG" secondAttribute="top" id="tTK-5B-7xm"/>
-                            <constraint firstItem="jW7-DD-IxN" firstAttribute="bottom" secondItem="xWU-V0-OKO" secondAttribute="bottom" constant="100" id="veK-oS-ld4"/>
                             <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="Vc8-G4-VSz" secondAttribute="trailing" constant="16" id="yHW-Fd-5zR"/>
                             <constraint firstItem="Vc8-G4-VSz" firstAttribute="top" secondItem="jW7-DD-IxN" secondAttribute="top" id="yLv-mm-IZA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jW7-DD-IxN"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="xWU-V0-OKO" id="dbf-QU-eXV"/>
+                        <outlet property="popButton" destination="AIK-7K-q6L" id="J5R-UH-5cf"/>
+                        <outlet property="scratchButton" destination="vxz-Pp-gtv" id="cvb-eW-lx5"/>
+                        <outlet property="swipeButton" destination="xWU-V0-OKO" id="hKe-9q-gHr"/>
                         <outlet property="userInput" destination="TGb-Op-uBW" id="9me-lR-fWE"/>
                         <segue destination="fDf-qF-JUq" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
                         <segue destination="MUG-GG-PbQ" kind="presentation" identifier="SegueToScratch" id="R4D-dm-pOR"/>
+                        <segue destination="vYd-EB-OPj" kind="presentation" identifier="SegueToSwipe" id="OOV-zk-1Io"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4n-LJ-cBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,8 +382,8 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Now that you've let it go here, try to do the same in your mind ... and don't forget to have a beautiful day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWi-eY-Oga">
-                                <rect key="frame" x="55" y="120" width="265" height="193"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now that you've let it go here, try to do the same in your mind ... and don't forget to have a beautiful day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWi-eY-Oga">
+                                <rect key="frame" x="55" y="120" width="265" height="150"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -385,7 +412,6 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R4D-dm-pOR"/>
-        <segue reference="Gos-Va-nvz"/>
+        <segue reference="GhF-wr-MKP"/>
     </inferredMetricsTieBreakers>
 </document>

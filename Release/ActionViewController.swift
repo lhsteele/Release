@@ -11,7 +11,10 @@ import UIKit
 class ActionViewController: UIViewController {
     
     @IBOutlet var userInput: UILabel!
-    @IBOutlet var button: UIButton!
+    @IBOutlet var scratchButton: UIButton!
+    @IBOutlet var popButton: UIButton!
+    @IBOutlet var swipeButton: UIButton!
+    
     var textInputPassed = String()
     
     override func viewDidLoad() {
@@ -22,10 +25,15 @@ class ActionViewController: UIViewController {
         
         print (textInputPassed)
     }
-
-    @IBAction func goButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "SegueToScratch", sender: button)
+    
+    @IBAction func scratchButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "SegueToScratch", sender: scratchButton)
     }
+    
+    @IBAction func swipeButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "SegueToSwipe", sender: swipeButton)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
