@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="973.60000000000002" y="117.39130434782609"/>
         </scene>
-        <!--ScratchView-->
+        <!--Scratch-->
         <scene sceneID="GHY-KB-3IK">
             <objects>
-                <viewController title="ScratchView" id="MUG-GG-PbQ" customClass="ScratchViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ScratchView" id="MUG-GG-PbQ" userLabel="Scratch" customClass="ScratchViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NmJ-gX-EOB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,14 +194,70 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="1IZ-pa-E5p" id="tJ0-Av-3F5"/>
-                        <outlet property="scratchView" destination="XJQ-C6-8Bg" id="07v-tl-QVX"/>
                         <outlet property="userInput" destination="2fx-r1-bLk" id="aCq-dj-oBm"/>
                         <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueScratchToAction" id="Gos-Va-nvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9U-8j-ko6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wiz-y2-ZlW" customClass="InteractionPanToClose"/>
             </objects>
             <point key="canvasLocation" x="1773.5999999999999" y="-631.93403298350825"/>
+        </scene>
+        <!--Swipe-->
+        <scene sceneID="lY3-na-U6p">
+            <objects>
+                <viewController id="vYd-EB-OPj" userLabel="Swipe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jRy-19-VV7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4k-Bj-sAG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xZJ-vj-G3c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Fos-Nl-BKl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-jJ-FFx">
+                                <rect key="frame" x="60" y="120" width="255" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-8c-Bfp">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WDp-8c-Bfp" secondAttribute="trailing" id="H6F-Vx-W3N"/>
+                                    <constraint firstAttribute="height" constant="250" id="UZz-yT-npZ"/>
+                                    <constraint firstItem="WDp-8c-Bfp" firstAttribute="leading" secondItem="MdA-jJ-FFx" secondAttribute="leading" id="eN8-7w-loU"/>
+                                    <constraint firstAttribute="bottom" secondItem="WDp-8c-Bfp" secondAttribute="bottom" id="eNh-nW-qKh"/>
+                                    <constraint firstItem="WDp-8c-Bfp" firstAttribute="top" secondItem="MdA-jJ-FFx" secondAttribute="top" id="r3R-Gs-dRh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="scE-bR-4RF" firstAttribute="trailing" secondItem="MdA-jJ-FFx" secondAttribute="trailing" constant="60" id="92S-rp-Gj8"/>
+                            <constraint firstItem="Q4k-Bj-sAG" firstAttribute="top" secondItem="jRy-19-VV7" secondAttribute="top" id="KhB-Ig-Pga"/>
+                            <constraint firstItem="Q4k-Bj-sAG" firstAttribute="trailing" secondItem="scE-bR-4RF" secondAttribute="trailing" id="XjK-VO-kas"/>
+                            <constraint firstItem="MdA-jJ-FFx" firstAttribute="top" secondItem="scE-bR-4RF" secondAttribute="top" constant="100" id="YAx-u3-l6P"/>
+                            <constraint firstItem="Q4k-Bj-sAG" firstAttribute="bottom" secondItem="scE-bR-4RF" secondAttribute="bottom" id="iY8-58-x4m"/>
+                            <constraint firstItem="Q4k-Bj-sAG" firstAttribute="leading" secondItem="scE-bR-4RF" secondAttribute="leading" id="khs-YN-dSP"/>
+                            <constraint firstItem="MdA-jJ-FFx" firstAttribute="leading" secondItem="scE-bR-4RF" secondAttribute="leading" constant="60" id="mzg-e9-kUH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="scE-bR-4RF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637.5999999999999" y="-632.83358320839591"/>
         </scene>
         <!--Action-->
         <scene sceneID="8hx-YD-VJS">
@@ -329,6 +385,7 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="R4D-dm-pOR"/>
         <segue reference="Gos-Va-nvz"/>
     </inferredMetricsTieBreakers>
 </document>
