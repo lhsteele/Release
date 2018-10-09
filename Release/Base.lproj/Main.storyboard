@@ -193,6 +193,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="1IZ-pa-E5p" id="tJ0-Av-3F5"/>
+                        <outlet property="scratchView" destination="XJQ-C6-8Bg" id="tXh-TU-fso"/>
                         <outlet property="userInput" destination="2fx-r1-bLk" id="aCq-dj-oBm"/>
                         <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueScratchToAction" id="Gos-Va-nvz"/>
                     </connections>
@@ -294,7 +295,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-gt-1Vd" userLabel="View" customClass="ScratchView" customModule="Release" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-gt-1Vd" userLabel="View">
                                 <rect key="frame" x="60" y="120" width="255" height="250"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-Op-uBW">
@@ -424,6 +425,6 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eby-Qj-gEe"/>
+        <segue reference="Gos-Va-nvz"/>
     </inferredMetricsTieBreakers>
 </document>
