@@ -178,7 +178,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jWR-9S-m8B" firstAttribute="top" secondItem="lyn-kD-G0C" secondAttribute="top" constant="-20" id="3mv-2m-Ska"/>
+                            <constraint firstItem="jWR-9S-m8B" firstAttribute="top" secondItem="NmJ-gX-EOB" secondAttribute="top" id="3mv-2m-Ska"/>
                             <constraint firstItem="jWR-9S-m8B" firstAttribute="bottom" secondItem="lyn-kD-G0C" secondAttribute="bottom" id="6K4-Nv-KlV"/>
                             <constraint firstItem="jWR-9S-m8B" firstAttribute="leading" secondItem="lyn-kD-G0C" secondAttribute="leading" id="7WQ-5I-RpL"/>
                             <constraint firstItem="XJQ-C6-8Bg" firstAttribute="leading" secondItem="lyn-kD-G0C" secondAttribute="leading" constant="60" id="9SR-sf-sUR"/>
@@ -201,7 +201,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9U-8j-ko6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="wiz-y2-ZlW" customClass="InteractionPanToClose"/>
             </objects>
-            <point key="canvasLocation" x="1773.5999999999999" y="-631.93403298350825"/>
+            <point key="canvasLocation" x="974" y="-633"/>
+        </scene>
+        <!--Pop-->
+        <scene sceneID="DRK-z3-Ko1">
+            <objects>
+                <viewController id="CuV-e3-d5Y" userLabel="Pop" customClass="PopViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83j-S6-xCx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="AYt-7h-NvU" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-WW-IPp" userLabel="Pop View">
+                                <rect key="frame" x="60" y="120" width="255" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c4-C0-uPh">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4c4-C0-uPh" firstAttribute="leading" secondItem="bAp-WW-IPp" secondAttribute="leading" id="7mL-Lj-Ibn"/>
+                                    <constraint firstAttribute="trailing" secondItem="4c4-C0-uPh" secondAttribute="trailing" id="bhx-nR-Ngr"/>
+                                    <constraint firstAttribute="height" constant="250" id="glM-gH-LZd"/>
+                                    <constraint firstAttribute="bottom" secondItem="4c4-C0-uPh" secondAttribute="bottom" id="mDN-RG-PMx"/>
+                                    <constraint firstItem="4c4-C0-uPh" firstAttribute="top" secondItem="bAp-WW-IPp" secondAttribute="top" id="oa9-rR-8RN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bAp-WW-IPp" firstAttribute="leading" secondItem="0Fv-wg-j7I" secondAttribute="leading" constant="60" id="1tM-hi-djc"/>
+                            <constraint firstItem="AYt-7h-NvU" firstAttribute="trailing" secondItem="0Fv-wg-j7I" secondAttribute="trailing" id="2JT-ZV-RvO"/>
+                            <constraint firstItem="AYt-7h-NvU" firstAttribute="bottom" secondItem="0Fv-wg-j7I" secondAttribute="bottom" id="4Ge-Yq-2an"/>
+                            <constraint firstItem="0Fv-wg-j7I" firstAttribute="trailing" secondItem="bAp-WW-IPp" secondAttribute="trailing" constant="60" id="CHU-4I-d5G"/>
+                            <constraint firstItem="bAp-WW-IPp" firstAttribute="centerX" secondItem="83j-S6-xCx" secondAttribute="centerX" id="E43-DS-OpK"/>
+                            <constraint firstItem="AYt-7h-NvU" firstAttribute="leading" secondItem="0Fv-wg-j7I" secondAttribute="leading" id="VkT-YG-bUm"/>
+                            <constraint firstItem="bAp-WW-IPp" firstAttribute="top" secondItem="0Fv-wg-j7I" secondAttribute="top" constant="100" id="ceY-h6-o4h"/>
+                            <constraint firstItem="AYt-7h-NvU" firstAttribute="top" secondItem="83j-S6-xCx" secondAttribute="top" id="uzC-Ze-aLM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Fv-wg-j7I"/>
+                    </view>
+                    <connections>
+                        <outlet property="popView" destination="bAp-WW-IPp" id="wwe-hI-IhQ"/>
+                        <outlet property="userInput" destination="4c4-C0-uPh" id="9sA-p0-Ljw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8D7-v3-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="-634.632683658171"/>
         </scene>
         <!--Swipe-->
         <scene sceneID="lY3-na-U6p">
@@ -272,7 +329,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2637.5999999999999" y="-632.83358320839591"/>
+            <point key="canvasLocation" x="2638" y="-634"/>
         </scene>
         <!--Action-->
         <scene sceneID="8hx-YD-VJS">
@@ -337,6 +394,10 @@
                                         <state key="normal" title="Pop">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="popButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="Hah-jW-wBZ"/>
+                                            <segue destination="CuV-e3-d5Y" kind="presentation" identifier="SegueToPop" id="ari-g8-xKF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
                                         <rect key="frame" x="122" y="0.0" width="56" height="30"/>
@@ -425,6 +486,6 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gos-Va-nvz"/>
+        <segue reference="eby-Qj-gEe"/>
     </inferredMetricsTieBreakers>
 </document>

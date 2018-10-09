@@ -34,6 +34,9 @@ class ActionViewController: UIViewController {
         performSegue(withIdentifier: "SegueToSwipe", sender: swipeButton)
     }
     
+    @IBAction func popButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "SegueToPop", sender: popButton)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,6 +50,10 @@ class ActionViewController: UIViewController {
         }
         if (segue.identifier == "SegueToSwipe") {
             let pointer = segue.destination as! SwipeViewController
+            pointer.textInputPassed = self.textInputPassed
+        }
+        if (segue.identifier == "SegueToPop") {
+            let pointer = segue.destination as! PopViewController
             pointer.textInputPassed = self.textInputPassed
         }
     }
