@@ -19,6 +19,14 @@ class PopViewController: UIViewController {
 
         userInput.text = textInputPassed
         userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        tap.numberOfTapsRequired = 3
+        popView.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapped() {
+        userInput.backgroundColor = UIColor.black
     }
 
     override func didReceiveMemoryWarning() {
