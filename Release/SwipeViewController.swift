@@ -9,7 +9,8 @@
 import UIKit
 
 class SwipeViewController: UIViewController {
-
+    
+    @IBOutlet var panToClose: InteractionPanToClose!
     @IBOutlet var userInput: UILabel!
     var textInputPassed = String()
     
@@ -18,6 +19,8 @@ class SwipeViewController: UIViewController {
 
         userInput.text = textInputPassed
         userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
+        
+        panToClose.setGestureRecognizer()
     }
 
     override func didReceiveMemoryWarning() {

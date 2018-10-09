@@ -257,10 +257,18 @@
                         <viewLayoutGuide key="safeArea" id="scE-bR-4RF"/>
                     </view>
                     <connections>
+                        <outlet property="panToClose" destination="3uK-LU-5eW" id="Y77-7a-YKK"/>
                         <outlet property="userInput" destination="WDp-8c-Bfp" id="mT8-Hc-i3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3uK-LU-5eW" userLabel="PanToClose" customClass="InteractionPanToClose" customModule="Release" customModuleProvider="target">
+                    <connections>
+                        <outlet property="view" destination="MdA-jJ-FFx" id="4Te-3q-WDU"/>
+                        <outlet property="viewController" destination="vYd-EB-OPj" id="jEb-QG-OJ9"/>
+                        <outlet property="visualEffectView" destination="Q4k-Bj-sAG" id="aqu-4b-NXR"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2637.5999999999999" y="-632.83358320839591"/>
         </scene>
