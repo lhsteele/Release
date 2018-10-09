@@ -25,6 +25,7 @@
 		425490BB2166C17B0061C322 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
 		425490BD2166D0EF0061C322 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		425490BF216D1F000061C322 /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		425490C1216D378A0061C322 /* Release-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Release-Bridging-Header.h"; sourceTree = "<group>"; };
 		4287DAB3215C1862009697FC /* Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4287DAB6215C1862009697FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4287DABB215C1862009697FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 				4287DABD215C1865009697FC /* Assets.xcassets */,
 				4287DABF215C1865009697FC /* LaunchScreen.storyboard */,
 				4287DAC2215C1865009697FC /* Info.plist */,
+				425490C1216D378A0061C322 /* Release-Bridging-Header.h */,
 			);
 			path = Release;
 			sourceTree = "<group>";
@@ -117,6 +119,7 @@
 				TargetAttributes = {
 					4287DAB2215C1862009697FC = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -308,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77F66T2364;
 				INFOPLIST_FILE = Release/Info.plist;
@@ -317,6 +321,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lisahsteele.Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Release/Release-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77F66T2364;
 				INFOPLIST_FILE = Release/Info.plist;
@@ -335,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lisahsteele.Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Release/Release-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

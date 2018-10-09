@@ -13,20 +13,37 @@ class PopViewController: UIViewController {
     @IBOutlet var popView: UIView!
     @IBOutlet var userInput: UILabel!
     var textInputPassed = String()
+    
+    var growLayer = CAShapeLayer()
 
+    var tap = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userInput.text = textInputPassed
         userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        tap.numberOfTapsRequired = 3
+        initiateTap()
+    }
+    
+    func initiateTap() {
+        tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        tap.numberOfTapsRequired = 1
         popView.addGestureRecognizer(tap)
     }
     
     @objc func tapped() {
-        userInput.backgroundColor = UIColor.black
+        //This makes it grow to a certain size over a certain duration of time.
+//        UIView.animate(withDuration: 5) {
+//            self.popView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+//        }
+        UIView.animate(withDuration: 0.5) {
+            self.popView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5);
+            self.tap.state = .ended
+        }
+        
+        initiateTap()
     }
 
     override func didReceiveMemoryWarning() {
