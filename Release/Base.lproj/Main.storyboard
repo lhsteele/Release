@@ -259,6 +259,7 @@
                     <connections>
                         <outlet property="panToClose" destination="3uK-LU-5eW" id="Y77-7a-YKK"/>
                         <outlet property="userInput" destination="WDp-8c-Bfp" id="mT8-Hc-i3q"/>
+                        <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueSwipeToAction" id="eby-Qj-gEe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,6 +424,6 @@
         <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gos-Va-nvz"/>
+        <segue reference="eby-Qj-gEe"/>
     </inferredMetricsTieBreakers>
 </document>
