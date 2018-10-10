@@ -219,6 +219,7 @@
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c4-C0-uPh">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -228,13 +229,23 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyY-OO-ANR" userLabel="PopButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
+                                        <connections>
+                                            <action selector="popAction:" destination="CuV-e3-d5Y" eventType="touchUpInside" id="hte-kn-IQB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="MyY-OO-ANR" firstAttribute="leading" secondItem="bAp-WW-IPp" secondAttribute="leading" id="3XO-P4-lkM"/>
                                     <constraint firstItem="4c4-C0-uPh" firstAttribute="leading" secondItem="bAp-WW-IPp" secondAttribute="leading" id="7mL-Lj-Ibn"/>
                                     <constraint firstAttribute="trailing" secondItem="4c4-C0-uPh" secondAttribute="trailing" id="bhx-nR-Ngr"/>
                                     <constraint firstAttribute="height" constant="250" id="glM-gH-LZd"/>
                                     <constraint firstAttribute="bottom" secondItem="4c4-C0-uPh" secondAttribute="bottom" id="mDN-RG-PMx"/>
                                     <constraint firstItem="4c4-C0-uPh" firstAttribute="top" secondItem="bAp-WW-IPp" secondAttribute="top" id="oa9-rR-8RN"/>
+                                    <constraint firstAttribute="trailing" secondItem="MyY-OO-ANR" secondAttribute="trailing" id="qd8-N0-wvH"/>
+                                    <constraint firstAttribute="bottom" secondItem="MyY-OO-ANR" secondAttribute="bottom" id="tjN-Ja-nB2"/>
+                                    <constraint firstItem="MyY-OO-ANR" firstAttribute="top" secondItem="bAp-WW-IPp" secondAttribute="top" id="zQo-pL-rDy"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -252,6 +263,7 @@
                         <viewLayoutGuide key="safeArea" id="0Fv-wg-j7I"/>
                     </view>
                     <connections>
+                        <outlet property="popButton" destination="MyY-OO-ANR" id="Ujt-l1-D1e"/>
                         <outlet property="popView" destination="bAp-WW-IPp" id="wwe-hI-IhQ"/>
                         <outlet property="userInput" destination="4c4-C0-uPh" id="9sA-p0-Ljw"/>
                     </connections>
