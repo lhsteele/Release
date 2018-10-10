@@ -15,10 +15,6 @@ class PopViewController: UIViewController {
     @IBOutlet var popButton: UIButton!
     var textInputPassed = String()
     
-    var growLayer = CAShapeLayer()
-
-    var tap = UITapGestureRecognizer()
-    var tapIsOn = Bool()
     var currentAnimation = 0
     
     override func viewDidLoad() {
@@ -26,8 +22,6 @@ class PopViewController: UIViewController {
 
         userInput.text = textInputPassed
         userInput.backgroundColor = UIColor(patternImage: UIImage(named: "LabelBackground")!)
-        
-        //initiateTap()
     }
     
     @IBAction func popAction(_ sender: Any) {
@@ -40,7 +34,7 @@ class PopViewController: UIViewController {
             case 4: self.popView.transform = CGAffineTransform(scaleX: 1.75, y: 1.75)
             case 5: self.popView.transform = CGAffineTransform(scaleX: 1.90, y: 1.90)
             case 6: self.popView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-            default: break
+            default: self.popView.removeFromSuperview()
             }
         })
         
@@ -50,29 +44,7 @@ class PopViewController: UIViewController {
         }
         
     }
-//    func initiateTap() {
-//        tap.state = .began
-//        tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-//        tap.numberOfTapsRequired = 3
-//        popView.addGestureRecognizer(tap)
-//        tapIsOn = false
-//    }
-    
-//    func handleTap(gestureRecognizer: UIGestureRecognizer) {
-//        popView.alpha = 0.75
-//        UIView.animate(withDuration: 0.5) {
-//            self.popView.alpha = 1.0
-//        }
-//    }
-//
-//    @objc func tapped() {
-//        //This makes it grow to a certain size over a certain duration of time.
-//        UIView.animate(withDuration: 5) {
-////            self.popView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-//            self.popView.transform = CGAffineTransform(scaleX: 2, y: 2)
-//        }
-//
-//    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
