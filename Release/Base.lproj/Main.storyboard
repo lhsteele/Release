@@ -65,13 +65,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Balloon" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-lD-qvd" userLabel="Balloon">
-                                <rect key="frame" x="60" y="120" width="255" height="275"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="275" id="4pB-4o-PPO"/>
-                                </constraints>
-                            </imageView>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Yl-w9x">
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e6z-Yl-w9x">
                                 <rect key="frame" x="37.5" y="120" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Nks-Nb-sNA"/>
@@ -104,26 +98,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5NM-G5-Kia" firstAttribute="bottom" secondItem="ZFb-et-YPW" secondAttribute="bottom" constant="100" id="0wB-7q-59K"/>
-                            <constraint firstItem="5NM-G5-Kia" firstAttribute="trailing" secondItem="Tve-lD-qvd" secondAttribute="trailing" constant="60" id="Abo-19-TmH"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="trailing" secondItem="5NM-G5-Kia" secondAttribute="trailing" id="Aii-mF-e5o"/>
                             <constraint firstItem="ZFb-et-YPW" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="FPu-uI-PGT"/>
                             <constraint firstItem="e6z-Yl-w9x" firstAttribute="top" secondItem="5NM-G5-Kia" secondAttribute="top" constant="100" id="J33-O7-d9Z"/>
-                            <constraint firstItem="Tve-lD-qvd" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" constant="60" id="UJE-My-KW9"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="leading" secondItem="5NM-G5-Kia" secondAttribute="leading" id="X6E-cG-5DK"/>
                             <constraint firstItem="e6z-Yl-w9x" firstAttribute="centerX" secondItem="rxI-W0-BmC" secondAttribute="centerX" id="bBZ-BH-9iq"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="top" secondItem="rxI-W0-BmC" secondAttribute="top" id="cPj-dX-loe"/>
                             <constraint firstItem="Am4-cy-pKq" firstAttribute="bottom" secondItem="5NM-G5-Kia" secondAttribute="bottom" id="qH3-LG-jmS"/>
-                            <constraint firstItem="Tve-lD-qvd" firstAttribute="top" secondItem="5NM-G5-Kia" secondAttribute="top" constant="100" id="ruh-aQ-nM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5NM-G5-Kia"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Tve-lD-qvd"/>
+                                <exclude reference="ZFb-et-YPW"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="balloonImage" destination="Tve-lD-qvd" id="jST-RN-nC7"/>
                         <outlet property="inputTextView" destination="e6z-Yl-w9x" id="DZv-PW-Djv"/>
                     </connections>
                 </viewController>
@@ -447,7 +437,7 @@
                         <outlet property="scratchButton" destination="vxz-Pp-gtv" id="cvb-eW-lx5"/>
                         <outlet property="swipeButton" destination="xWU-V0-OKO" id="hKe-9q-gHr"/>
                         <outlet property="userInput" destination="TGb-Op-uBW" id="9me-lR-fWE"/>
-                        <segue destination="fDf-qF-JUq" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
+                        <segue destination="fDf-qF-JUq" kind="presentation" identifier="ExitSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
                         <segue destination="MUG-GG-PbQ" kind="presentation" identifier="SegueToScratch" id="R4D-dm-pOR"/>
                         <segue destination="vYd-EB-OPj" kind="presentation" identifier="SegueToSwipe" id="OOV-zk-1Io"/>
                     </connections>
@@ -495,9 +485,8 @@
     </scenes>
     <resources>
         <image name="Background" width="200" height="300"/>
-        <image name="Balloon" width="650" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eby-Qj-gEe"/>
+        <segue reference="GhF-wr-MKP"/>
     </inferredMetricsTieBreakers>
 </document>
