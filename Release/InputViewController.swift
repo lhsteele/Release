@@ -28,6 +28,11 @@ class InputViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var inputTextView: UITextView!
     var textInputPassed = String()
     
+    let stackView = UIStackView()
+    let scratch = UIButton()
+    let pop = UIButton()
+    let swipe = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         inputTextView.delegate = self
@@ -36,8 +41,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         //Popup Animation
         layout()
         popupView.addGestureRecognizer(panRecognizer)
-        
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,6 +86,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.1
         view.layer.shadowRadius = 10
+        view.layer.cornerRadius = 20
         return view
     }()
     
@@ -109,11 +115,6 @@ class InputViewController: UIViewController, UITextViewDelegate {
         imageView.image = #imageLiteral(resourceName: "LabelBackground")
         return imageView
     }()
-    
-    let stackView = UIStackView()
-    let scratch = UIButton()
-    let pop = UIButton()
-    let swipe = UIButton()
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -151,7 +152,6 @@ class InputViewController: UIViewController, UITextViewDelegate {
         reviewsImageView.bottomAnchor.constraint(equalTo: popupView.bottomAnchor).isActive = true
         reviewsImageView.heightAnchor.constraint(equalToConstant: 428).isActive = true
         
-        //scratch.backgroundColor = UIColor.clear
         let heightConstraintScratch = scratch.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintScratch.isActive = true
         heightConstraintScratch.priority = UILayoutPriority(rawValue: 999)
@@ -160,10 +160,9 @@ class InputViewController: UIViewController, UITextViewDelegate {
         scratch.setTitle("Scratch", for: .normal)
         scratch.setTitleColor(UIColor.darkGray, for: .normal)
         scratch.backgroundColor = UIColor.clear
-        //scratch.addTarget(self, action: "ScratchSegue", for: .touchUpInside)
-        self.popupView.addSubview(scratch)
+        scratch.addTarget(self, action: #selector(self.scratchTapped(sender:)), for: .touchUpInside)
+        self.reviewsImageView.addSubview(scratch)
         
-        //pop.backgroundColor = UIColor.clear
         let heightConstraintPop = pop.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintPop.isActive = true
         heightConstraintPop.priority = UILayoutPriority(rawValue: 999)
@@ -173,9 +172,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         pop.setTitleColor(UIColor.darkGray, for: .normal)
         pop.backgroundColor = UIColor.clear
         //pop.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
-        self.popupView.addSubview(pop)
+        self.reviewsImageView.addSubview(pop)
         
-        //swipe.backgroundColor = UIColor.clear
         let heightConstraintSwipe = swipe.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintSwipe.isActive = true
         heightConstraintSwipe.priority = UILayoutPriority(rawValue: 999)
@@ -185,9 +183,9 @@ class InputViewController: UIViewController, UITextViewDelegate {
         swipe.setTitleColor(UIColor.darkGray, for: .normal)
         swipe.backgroundColor = UIColor.clear
         //swipe.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
-        self.popupView.addSubview(swipe)
+        self.reviewsImageView.addSubview(swipe)
         
-        popupView.addSubview(stackView)
+        reviewsImageView.addSubview(stackView)
         stackView.backgroundColor = UIColor.clear
         
         stackView.addArrangedSubview(scratch)
@@ -195,7 +193,6 @@ class InputViewController: UIViewController, UITextViewDelegate {
         stackView.addArrangedSubview(swipe)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        popupView.addSubview(stackView)
         stackView.leadingAnchor.constraint(equalTo: popupView.leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: popupView.trailingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: popupView.bottomAnchor).isActive = true
@@ -204,7 +201,11 @@ class InputViewController: UIViewController, UITextViewDelegate {
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
+        stackView.clipsToBounds = true
+    }
+    
+    @objc func scratchTapped(sender: UIButton) {
+        print ("test")
     }
     
     
@@ -235,7 +236,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
                 self.openTitleLabel.transform = .identity
             case .closed:
                 self.bottomConstraint.constant = self.popupOffset
-                self.popupView.layer.cornerRadius = 0
+                self.popupView.layer.cornerRadius = 20
                 self.closedTitleLabel.transform = .identity
                 self.openTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
             }
