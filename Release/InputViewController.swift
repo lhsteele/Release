@@ -156,11 +156,11 @@ class InputViewController: UIViewController, UITextViewDelegate {
         heightConstraintScratch.isActive = true
         heightConstraintScratch.priority = UILayoutPriority(rawValue: 999)
         scratch.translatesAutoresizingMaskIntoConstraints = false
-        
+        self.scratch.addTarget(self, action: #selector(self.scratchTapped(sender:)), for: .touchDown)
         scratch.setTitle("Scratch", for: .normal)
         scratch.setTitleColor(UIColor.darkGray, for: .normal)
         scratch.backgroundColor = UIColor.clear
-        scratch.addTarget(self, action: #selector(self.scratchTapped(sender:)), for: .touchUpInside)
+        
         self.reviewsImageView.addSubview(scratch)
         
         let heightConstraintPop = pop.heightAnchor.constraint(equalToConstant: 135)
@@ -230,32 +230,39 @@ class InputViewController: UIViewController, UITextViewDelegate {
         let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1, animations: {
             switch state {
             case .open:
+                print ("open")
                 self.bottomConstraint.constant = 0
                 self.popupView.layer.cornerRadius = 20
                 self.closedTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
                 self.openTitleLabel.transform = .identity
+                UIViewAnimationOption.AllowUserInteration = 1 << 1
             case .closed:
+                print ("closed") 
                 self.bottomConstraint.constant = self.popupOffset
                 self.popupView.layer.cornerRadius = 20
-                self.closedTitleLabel.transform = .identity
                 self.openTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
+                self.closedTitleLabel.transform = .identity
             }
             self.view.layoutIfNeeded()
         })
         transitionAnimator.addCompletion { position in
+            //start and end refer to the animation starting and ending
             switch position {
             case .start:
                 self.currentState = state.opposite
             case .end:
                 self.currentState = state
             case .current:
-                //()
-                self.currentState = state.opposite
+                ()
+                //self.currentState = state.opposite
             }
             switch self.currentState {
+            //This refers to whether it is open or closed, but doesn't make one or the other happen
             case .open:
                 self.bottomConstraint.constant = 0
                 self.closedTitleLabel.alpha = 0
+                self.stopAnimation(true)
+                self.scratch.addTarget(self, action: #selector(self.scratchTapped(sender:)), for: .touchDown)
             case .closed:
                 self.bottomConstraint.constant = self.popupOffset
                 self.openTitleLabel.alpha = 0
@@ -271,7 +278,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
             }
         })
         inTitleAnimator.scrubsLinearly = false
-        
+
         let outTitleAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut, animations: {
             switch state {
             case.closed:
@@ -291,13 +298,18 @@ class InputViewController: UIViewController, UITextViewDelegate {
         runningAnimators.append(outTitleAnimator)
     }
     
+    func stopAnimation(_ withoutFinishing: Bool) {
+    }
+    
     @objc private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
+            //This handles both the open and close animation
             animateTransitionIfNeeded(to: currentState.opposite, duration: 1.5)
             runningAnimators.forEach { $0.pauseAnimation() }
             animationProgress = runningAnimators.map { $0.fractionComplete }
         case .changed:
+            //This is for when the user stops the open animation midway and pans the popup back down the screen.
             let translation = recognizer.translation(in: popupView)
             var fraction = -translation.y / popupOffset
             if currentState == .open { fraction *= -1 }
