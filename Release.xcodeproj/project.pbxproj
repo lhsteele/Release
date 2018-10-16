@@ -15,7 +15,6 @@
 		4287DABE215C1865009697FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4287DABD215C1865009697FC /* Assets.xcassets */; };
 		4287DAC1215C1865009697FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4287DABF215C1865009697FC /* LaunchScreen.storyboard */; };
 		4287DAC9215C1CB5009697FC /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAC8215C1CB5009697FC /* InputViewController.swift */; };
-		4287DACD215C1F27009697FC /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DACC215C1F27009697FC /* ActionViewController.swift */; };
 		4287DACF215C215C009697FC /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DACE215C215C009697FC /* ExitViewController.swift */; };
 		4287DAD121656ECF009697FC /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAD021656ECF009697FC /* ScratchView.swift */; };
 		4287DAD32165770E009697FC /* ScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287DAD22165770E009697FC /* ScratchViewController.swift */; };
@@ -33,7 +32,6 @@
 		4287DAC0215C1865009697FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4287DAC2215C1865009697FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4287DAC8215C1CB5009697FC /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		4287DACC215C1F27009697FC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		4287DACE215C215C009697FC /* ExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		4287DAD021656ECF009697FC /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 		4287DAD22165770E009697FC /* ScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 			children = (
 				4287DAB6215C1862009697FC /* AppDelegate.swift */,
 				4287DAC8215C1CB5009697FC /* InputViewController.swift */,
-				4287DACC215C1F27009697FC /* ActionViewController.swift */,
 				4287DAD22165770E009697FC /* ScratchViewController.swift */,
 				425490BD2166D0EF0061C322 /* SwipeViewController.swift */,
 				425490BF216D1F000061C322 /* PopViewController.swift */,
@@ -167,7 +164,6 @@
 				4287DAD32165770E009697FC /* ScratchViewController.swift in Sources */,
 				425490BC2166C17B0061C322 /* InteractionPanToClose.swift in Sources */,
 				4287DAC9215C1CB5009697FC /* InputViewController.swift in Sources */,
-				4287DACD215C1F27009697FC /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

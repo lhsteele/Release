@@ -90,9 +90,6 @@
                                 <state key="normal" title="I'm ready to let it go!">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueToAction" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="GhF-wr-MKP"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,116 +333,6 @@
             </objects>
             <point key="canvasLocation" x="2638" y="-634"/>
         </scene>
-        <!--Action-->
-        <scene sceneID="8hx-YD-VJS">
-            <objects>
-                <viewController id="7wh-fS-hCi" userLabel="Action" customClass="ActionViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0V6-Yd-tXG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="2fS-Hx-H9r" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.52941176470588236" green="0.63137254901960782" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc8-G4-VSz" userLabel="Counter">
-                                <rect key="frame" x="333" y="20" width="26" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Ab5-8v-C9t"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-gt-1Vd" userLabel="View">
-                                <rect key="frame" x="60" y="120" width="255" height="250"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-Op-uBW">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="250"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="TGb-Op-uBW" secondAttribute="bottom" id="383-64-gbu"/>
-                                    <constraint firstItem="TGb-Op-uBW" firstAttribute="leading" secondItem="IUV-gt-1Vd" secondAttribute="leading" id="Rxf-r7-WMw"/>
-                                    <constraint firstAttribute="height" constant="250" id="cs1-wn-Jke"/>
-                                    <constraint firstItem="TGb-Op-uBW" firstAttribute="top" secondItem="IUV-gt-1Vd" secondAttribute="top" id="jmZ-Ah-PPL"/>
-                                    <constraint firstAttribute="trailing" secondItem="TGb-Op-uBW" secondAttribute="trailing" id="r4H-WU-5cx"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DAn-Kr-ZMn">
-                                <rect key="frame" x="98" y="537" width="178" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxz-Pp-gtv">
-                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Scratch">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="scratchButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="gaA-Ho-OLM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIK-7K-q6L">
-                                        <rect key="frame" x="61" y="0.0" width="56" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Pop">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="popButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="Hah-jW-wBZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
-                                        <rect key="frame" x="122" y="0.0" width="56" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="Swipe">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="swipeButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="CC4-Gw-xCP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="IUV-gt-1Vd" firstAttribute="top" secondItem="jW7-DD-IxN" secondAttribute="top" constant="100" id="0Jx-ZD-XPX"/>
-                            <constraint firstItem="2fS-Hx-H9r" firstAttribute="trailing" secondItem="jW7-DD-IxN" secondAttribute="trailing" id="3QU-nB-fUO"/>
-                            <constraint firstItem="IUV-gt-1Vd" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="6ty-sp-vMb"/>
-                            <constraint firstItem="2fS-Hx-H9r" firstAttribute="bottom" secondItem="jW7-DD-IxN" secondAttribute="bottom" id="FBN-J3-3hf"/>
-                            <constraint firstItem="2fS-Hx-H9r" firstAttribute="leading" secondItem="jW7-DD-IxN" secondAttribute="leading" id="R8g-HM-80z"/>
-                            <constraint firstItem="DAn-Kr-ZMn" firstAttribute="centerX" secondItem="0V6-Yd-tXG" secondAttribute="centerX" id="SDm-Wo-buY"/>
-                            <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="IUV-gt-1Vd" secondAttribute="trailing" constant="60" id="Xlr-pj-NfB"/>
-                            <constraint firstItem="IUV-gt-1Vd" firstAttribute="leading" secondItem="jW7-DD-IxN" secondAttribute="leading" constant="60" id="Xlv-23-DUd"/>
-                            <constraint firstItem="Vc8-G4-VSz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0V6-Yd-tXG" secondAttribute="leading" constant="20" symbolic="YES" id="dyc-US-pOo"/>
-                            <constraint firstItem="jW7-DD-IxN" firstAttribute="bottom" secondItem="DAn-Kr-ZMn" secondAttribute="bottom" constant="100" id="kSu-kM-RKE"/>
-                            <constraint firstItem="2fS-Hx-H9r" firstAttribute="top" secondItem="0V6-Yd-tXG" secondAttribute="top" id="tTK-5B-7xm"/>
-                            <constraint firstItem="jW7-DD-IxN" firstAttribute="trailing" secondItem="Vc8-G4-VSz" secondAttribute="trailing" constant="16" id="yHW-Fd-5zR"/>
-                            <constraint firstItem="Vc8-G4-VSz" firstAttribute="top" secondItem="jW7-DD-IxN" secondAttribute="top" id="yLv-mm-IZA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="jW7-DD-IxN"/>
-                    </view>
-                    <connections>
-                        <outlet property="popButton" destination="AIK-7K-q6L" id="J5R-UH-5cf"/>
-                        <outlet property="scratchButton" destination="vxz-Pp-gtv" id="cvb-eW-lx5"/>
-                        <outlet property="swipeButton" destination="xWU-V0-OKO" id="hKe-9q-gHr"/>
-                        <outlet property="userInput" destination="TGb-Op-uBW" id="9me-lR-fWE"/>
-                        <segue destination="fDf-qF-JUq" kind="presentation" identifier="ExitSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q4n-LJ-cBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1773.5999999999999" y="118.29085457271366"/>
-        </scene>
         <!--Exit-->
         <scene sceneID="NpC-uZ-lKK">
             <objects>
@@ -480,14 +367,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWX-sv-gtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637.5999999999999" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1774" y="117"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="200" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LLi-c4-Gia"/>
         <segue reference="8JZ-cL-oL4"/>
     </inferredMetricsTieBreakers>
 </document>
