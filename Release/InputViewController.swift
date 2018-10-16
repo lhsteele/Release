@@ -43,17 +43,15 @@ class InputViewController: UIViewController, UITextViewDelegate {
         popupView.addGestureRecognizer(panRecognizer)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "SegueToAction") {
-            //pass the textfield input to the next view
-            let pointer = segue.destination as! ActionViewController
+        if (segue.identifier == "ScratchSegue") {
+            let pointer = segue.destination as! ScratchViewController
+            pointer.textInputPassed = self.textInputPassed
+        } else if (segue.identifier == "PopSegue") {
+            let pointer = segue.destination as! PopViewController
+            pointer.textInputPassed = self.textInputPassed
+        } else if (segue.identifier == "SwipeSegue") {
+            let pointer = segue.destination as! SwipeViewController
             pointer.textInputPassed = self.textInputPassed
         }
     }
