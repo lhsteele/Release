@@ -153,7 +153,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
         
         scratch.setTitle("Scratch", for: .normal)
         scratch.setTitleColor(UIColor.darkGray, for: .normal)
-        scratch.backgroundColor = UIColor.clear
+        scratch.backgroundColor = UIColor(red: 253/255, green: 39/255, blue: 129/255, alpha: 0.5)
         scratch.addTarget(self, action: #selector(scratchTapped(sender:)), for: .touchDown)
         
         let heightConstraintPop = pop.heightAnchor.constraint(equalToConstant: 135)
@@ -163,8 +163,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         
         pop.setTitle("Pop", for: .normal)
         pop.setTitleColor(UIColor.darkGray, for: .normal)
-        pop.backgroundColor = UIColor.clear
-        //pop.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
+        pop.backgroundColor = UIColor(red: 253/255, green: 39/255, blue: 129/255, alpha: 0.30)
+        pop.addTarget(self, action: #selector(popTapped(sender:)), for: .touchDown)
         
         let heightConstraintSwipe = swipe.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintSwipe.isActive = true
@@ -173,8 +173,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         
         swipe.setTitle("Swipe", for: .normal)
         swipe.setTitleColor(UIColor.darkGray, for: .normal)
-        swipe.backgroundColor = UIColor.clear
-        //swipe.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
+        swipe.backgroundColor =  UIColor(red: 253/255, green: 39/255, blue: 129/255, alpha: 0.15)
+        swipe.addTarget(self, action: #selector(swipeTapped(sender:)), for: .touchDown)
         
         popupView.addSubview(stackView)
         stackView.backgroundColor = UIColor.clear
@@ -196,7 +196,15 @@ class InputViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func scratchTapped(sender: UIButton) {
-        print ("test")
+        performSegue(withIdentifier: "ScratchSegue", sender: scratch)
+    }
+    
+    @objc func popTapped(sender: UIButton) {
+        performSegue(withIdentifier: "PopSegue", sender: pop)
+    }
+    
+    @objc func swipeTapped(sender: UIButton) {
+        performSegue(withIdentifier: "SwipeSegue", sender: swipe)
     }
     
     

@@ -115,6 +115,9 @@
                     </view>
                     <connections>
                         <outlet property="inputTextView" destination="e6z-Yl-w9x" id="DZv-PW-Djv"/>
+                        <segue destination="MUG-GG-PbQ" kind="presentation" identifier="ScratchSegue" id="ido-Xq-e9a"/>
+                        <segue destination="CuV-e3-d5Y" kind="presentation" identifier="PopSegue" id="NTL-ZL-xGf"/>
+                        <segue destination="vYd-EB-OPj" kind="presentation" identifier="SwipeSegue" id="LLi-c4-Gia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zl-9s-MM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,7 +188,7 @@
                         <outlet property="backButton" destination="1IZ-pa-E5p" id="tJ0-Av-3F5"/>
                         <outlet property="scratchView" destination="XJQ-C6-8Bg" id="tXh-TU-fso"/>
                         <outlet property="userInput" destination="2fx-r1-bLk" id="aCq-dj-oBm"/>
-                        <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueScratchToAction" id="Gos-Va-nvz"/>
+                        <segue destination="6G8-GO-02T" kind="presentation" identifier="SegueBackToInput" id="AYu-0j-zIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9U-8j-ko6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,7 +322,7 @@
                     <connections>
                         <outlet property="panToClose" destination="3uK-LU-5eW" id="Y77-7a-YKK"/>
                         <outlet property="userInput" destination="WDp-8c-Bfp" id="mT8-Hc-i3q"/>
-                        <segue destination="7wh-fS-hCi" kind="presentation" identifier="SegueSwipeToAction" id="eby-Qj-gEe"/>
+                        <segue destination="6G8-GO-02T" kind="presentation" identifier="SegueBackToInput" id="8JZ-cL-oL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,7 +401,6 @@
                                         </state>
                                         <connections>
                                             <action selector="popButtonTapped:" destination="7wh-fS-hCi" eventType="touchUpInside" id="Hah-jW-wBZ"/>
-                                            <segue destination="CuV-e3-d5Y" kind="presentation" identifier="SegueToPop" id="ari-g8-xKF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWU-V0-OKO">
@@ -438,8 +440,6 @@
                         <outlet property="swipeButton" destination="xWU-V0-OKO" id="hKe-9q-gHr"/>
                         <outlet property="userInput" destination="TGb-Op-uBW" id="9me-lR-fWE"/>
                         <segue destination="fDf-qF-JUq" kind="presentation" identifier="ExitSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="oxf-zr-RoP"/>
-                        <segue destination="MUG-GG-PbQ" kind="presentation" identifier="SegueToScratch" id="R4D-dm-pOR"/>
-                        <segue destination="vYd-EB-OPj" kind="presentation" identifier="SegueToSwipe" id="OOV-zk-1Io"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4n-LJ-cBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,6 +487,7 @@
         <image name="Background" width="200" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GhF-wr-MKP"/>
+        <segue reference="LLi-c4-Gia"/>
+        <segue reference="8JZ-cL-oL4"/>
     </inferredMetricsTieBreakers>
 </document>

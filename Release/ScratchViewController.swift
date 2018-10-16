@@ -25,12 +25,12 @@ class ScratchViewController: UIViewController {
     
     
     @IBAction func backToAction(_ sender: Any) {
-        performSegue(withIdentifier: "SegueScratchToAction", sender: backButton)
+        performSegue(withIdentifier: "SegueBackToInput", sender: backButton)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "SegueScratchToAction") {
-            let pointer = segue.destination as! ActionViewController
+        if (segue.identifier == "SegueBackToInput") {
+            let pointer = segue.destination as! InputViewController
             pointer.textInputPassed = self.textInputPassed
         }
     }
