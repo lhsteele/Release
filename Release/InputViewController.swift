@@ -42,12 +42,13 @@ class InputViewController: UIViewController, UITextViewDelegate {
         layout()
         popupView.addGestureRecognizer(panRecognizer)
     }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SegueToAction") {
@@ -145,23 +146,15 @@ class InputViewController: UIViewController, UITextViewDelegate {
         openTitleLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor).isActive = true
         openTitleLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 20).isActive = true
         
-        reviewsImageView.translatesAutoresizingMaskIntoConstraints = false
-        popupView.addSubview(reviewsImageView)
-        reviewsImageView.leadingAnchor.constraint(equalTo: popupView.leadingAnchor).isActive = true
-        reviewsImageView.trailingAnchor.constraint(equalTo: popupView.trailingAnchor).isActive = true
-        reviewsImageView.bottomAnchor.constraint(equalTo: popupView.bottomAnchor).isActive = true
-        reviewsImageView.heightAnchor.constraint(equalToConstant: 428).isActive = true
-        
         let heightConstraintScratch = scratch.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintScratch.isActive = true
         heightConstraintScratch.priority = UILayoutPriority(rawValue: 999)
         scratch.translatesAutoresizingMaskIntoConstraints = false
-        self.scratch.addTarget(self, action: #selector(self.scratchTapped(sender:)), for: .touchDown)
+        
         scratch.setTitle("Scratch", for: .normal)
         scratch.setTitleColor(UIColor.darkGray, for: .normal)
         scratch.backgroundColor = UIColor.clear
-        
-        self.reviewsImageView.addSubview(scratch)
+        scratch.addTarget(self, action: #selector(scratchTapped(sender:)), for: .touchDown)
         
         let heightConstraintPop = pop.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintPop.isActive = true
@@ -172,7 +165,6 @@ class InputViewController: UIViewController, UITextViewDelegate {
         pop.setTitleColor(UIColor.darkGray, for: .normal)
         pop.backgroundColor = UIColor.clear
         //pop.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
-        self.reviewsImageView.addSubview(pop)
         
         let heightConstraintSwipe = swipe.heightAnchor.constraint(equalToConstant: 135)
         heightConstraintSwipe.isActive = true
@@ -183,9 +175,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         swipe.setTitleColor(UIColor.darkGray, for: .normal)
         swipe.backgroundColor = UIColor.clear
         //swipe.addTarget(self, action: #selector(performSegue(withIdentifier:sender:"")), for: .touchUpInside)
-        self.reviewsImageView.addSubview(swipe)
         
-        reviewsImageView.addSubview(stackView)
+        popupView.addSubview(stackView)
         stackView.backgroundColor = UIColor.clear
         
         stackView.addArrangedSubview(scratch)
@@ -200,8 +191,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         
         stackView.axis = .vertical
         stackView.distribution = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.clipsToBounds = true
+
     }
     
     @objc func scratchTapped(sender: UIButton) {
@@ -235,7 +226,6 @@ class InputViewController: UIViewController, UITextViewDelegate {
                 self.popupView.layer.cornerRadius = 20
                 self.closedTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
                 self.openTitleLabel.transform = .identity
-                UIViewAnimationOption.AllowUserInteration = 1 << 1
             case .closed:
                 print ("closed") 
                 self.bottomConstraint.constant = self.popupOffset
