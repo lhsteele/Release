@@ -34,7 +34,8 @@ class PopViewController: UIViewController {
             case 4: self.popView.transform = CGAffineTransform(scaleX: 1.75, y: 1.75)
             case 5: self.popView.transform = CGAffineTransform(scaleX: 1.90, y: 1.90)
             case 6: self.popView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-            default: self.popView.removeFromSuperview()
+            default:self.popped()
+                //self.popView.removeFromSuperview()
             }
         })
         
@@ -45,21 +46,16 @@ class PopViewController: UIViewController {
         
     }
 
+    func popped() {
+        self.popView.removeFromSuperview()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.performSegue(withIdentifier: "SegueBackToInput", sender: self.popButton)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

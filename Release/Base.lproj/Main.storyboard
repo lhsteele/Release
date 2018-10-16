@@ -256,6 +256,7 @@
                         <outlet property="popButton" destination="MyY-OO-ANR" id="Ujt-l1-D1e"/>
                         <outlet property="popView" destination="bAp-WW-IPp" id="wwe-hI-IhQ"/>
                         <outlet property="userInput" destination="4c4-C0-uPh" id="9sA-p0-Ljw"/>
+                        <segue destination="6G8-GO-02T" kind="presentation" identifier="SegueBackToInput" id="l5O-1P-eIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8D7-v3-q0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -374,6 +375,6 @@
         <image name="Background" width="200" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8JZ-cL-oL4"/>
+        <segue reference="l5O-1P-eIf"/>
     </inferredMetricsTieBreakers>
 </document>
