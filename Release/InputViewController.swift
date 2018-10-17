@@ -37,7 +37,9 @@ class InputViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         inputTextView.delegate = self
         inputTextView.returnKeyType = .done
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         //Popup Animation
         layout()
         popupView.addGestureRecognizer(panRecognizer)
@@ -145,8 +147,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         openTitleLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 20).isActive = true
         
         let heightConstraintScratch = scratch.heightAnchor.constraint(equalToConstant: 135)
-        heightConstraintScratch.isActive = true
         heightConstraintScratch.priority = UILayoutPriority(rawValue: 999)
+        heightConstraintScratch.isActive = true
         scratch.translatesAutoresizingMaskIntoConstraints = false
         
         scratch.setTitle("Scratch", for: .normal)
@@ -155,8 +157,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         scratch.addTarget(self, action: #selector(scratchTapped(sender:)), for: .touchDown)
         
         let heightConstraintPop = pop.heightAnchor.constraint(equalToConstant: 135)
-        heightConstraintPop.isActive = true
         heightConstraintPop.priority = UILayoutPriority(rawValue: 999)
+        heightConstraintPop.isActive = true
         pop.translatesAutoresizingMaskIntoConstraints = false
         
         pop.setTitle("Pop", for: .normal)
@@ -165,8 +167,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         pop.addTarget(self, action: #selector(popTapped(sender:)), for: .touchDown)
         
         let heightConstraintSwipe = swipe.heightAnchor.constraint(equalToConstant: 135)
-        heightConstraintSwipe.isActive = true
         heightConstraintSwipe.priority = UILayoutPriority(rawValue: 999)
+        heightConstraintSwipe.isActive = true
         swipe.translatesAutoresizingMaskIntoConstraints = false
         
         swipe.setTitle("Swipe", for: .normal)
@@ -195,14 +197,17 @@ class InputViewController: UIViewController, UITextViewDelegate {
     
     @objc func scratchTapped(sender: UIButton) {
         performSegue(withIdentifier: "ScratchSegue", sender: scratch)
+        popupView.removeFromSuperview()
     }
     
     @objc func popTapped(sender: UIButton) {
         performSegue(withIdentifier: "PopSegue", sender: pop)
+        popupView.removeFromSuperview()
     }
     
     @objc func swipeTapped(sender: UIButton) {
         performSegue(withIdentifier: "SwipeSegue", sender: swipe)
+        popupView.removeFromSuperview()
     }
     
     
@@ -219,7 +224,7 @@ class InputViewController: UIViewController, UITextViewDelegate {
         recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
         return recognizer
     }()
-    
+
     private func animateTransitionIfNeeded(to state: State, duration: TimeInterval) {
         
         guard runningAnimators.isEmpty else { return }
@@ -249,8 +254,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
             case .end:
                 self.currentState = state
             case .current:
-                ()
-                //self.currentState = state.opposite
+                //()
+                self.currentState = state
             }
             switch self.currentState {
             //This refers to whether it is open or closed, but doesn't make one or the other happen
