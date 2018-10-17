@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Welcome" customClass="ViewController" customModule="Release" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +325,7 @@
                     <connections>
                         <outlet property="panToClose" destination="3uK-LU-5eW" id="Y77-7a-YKK"/>
                         <outlet property="userInput" destination="WDp-8c-Bfp" id="mT8-Hc-i3q"/>
-                        <segue destination="6G8-GO-02T" kind="presentation" identifier="SegueBackToInput" id="8JZ-cL-oL4"/>
+                        <segue destination="6G8-GO-02T" kind="show" identifier="SegueBackToInput" id="8JZ-cL-oL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-aU-NiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,6 +380,6 @@
         <image name="Background" width="200" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8JZ-cL-oL4"/>
+        <segue reference="c5c-wO-FmA"/>
     </inferredMetricsTieBreakers>
 </document>

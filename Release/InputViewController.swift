@@ -190,8 +190,8 @@ class InputViewController: UIViewController, UITextViewDelegate {
         stackView.heightAnchor.constraint(equalToConstant: 428).isActive = true
         
         stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.clipsToBounds = true
+        stackView.distribution = .fillEqually
+        stackView.clipsToBounds = false
 
     }
     

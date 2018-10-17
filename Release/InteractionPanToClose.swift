@@ -86,14 +86,12 @@ class InteractionPanToClose: UIPercentDrivenInteractiveTransition {
         let animator = UIViewPropertyAnimator(duration: 1.5, dampingRatio: 1.5) {
             self.view.frame.origin.y += 200
             self.visualEffectView.effect = nil
-            //self.viewController.dismiss(animated: true)
             self.view.removeFromSuperview()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.viewController.performSegue(withIdentifier: "SegueBackToInput", sender: self)
             }
         }
         animator.startAnimation()
-        //animator.startAnimation(afterDelay: 5.0)
     }
 }
 
