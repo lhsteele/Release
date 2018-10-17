@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="300" id="Nks-Nb-sNA"/>
                                     <constraint firstAttribute="width" constant="300" id="ZRo-af-Pmp"/>
                                 </constraints>
-                                <string key="text">Is there a worry, stressor, or anxiety you're carrying around with you? Sometimes it helps to write it down. Get it out of your head ... and then pop, swipe, or scribble your negative thought away!</string>
+                                <string key="text">Is there a worry, stressor, or anxiety you're carrying around with you? Sometimes it helps to write it down. Get it out of your head ... and then pop, swipe, or scratch your negative thought away!</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -380,6 +380,7 @@
         <image name="Background" width="200" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c5c-wO-FmA"/>
+        <segue reference="ido-Xq-e9a"/>
+        <segue reference="AYu-0j-zIN"/>
     </inferredMetricsTieBreakers>
 </document>
